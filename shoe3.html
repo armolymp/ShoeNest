@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="jquery.js"></script>
+    <script src="shoes.json"></script>
+    <script src="save.js"></script>
+    <link rel="stylesheet" href="aboutstyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="container">
+        <div><img src="logo.jpg" alt="WLogo" width="100" height="100" id="logo"></div>
+        <div id="company">Westminster Shoe Shop </div>
+      </header>
+      <nav class="navigation">
+        <ul>
+          <li><a href="main.html">MAIN</a></li>
+          <li><a href="allShoes.html">BUY</a></li>
+        </ul>
+      </nav>
+      <div class="container-fluid">
+        <div class="container-fluid">    
+          <div class="row">
+            <div class="col-sm"><a href="images/shoe1.jpg"><img id="img1" class="shoes" src="images/shoe1.jpg" alt="" width="200" height="200"></a></div>
+            <div class="col-sm"><a href="images/shoe2.jpg"><img id="img2" class="shoes" src="images/shoe2.jpg" alt="" width="200" height="200"></a></div>
+            <div class="col-sm"><a href="images/shoe3.jpg"><img id="img3" class="shoes" src="images/shoe3.jpg" alt="" width="200" height="200"></a></div>
+            <div class="col-sm"><a href="images/shoe4.jpg"><img id="img4" class="shoes" src="images/shoe4.jpg" alt="" width="200" height="200"></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="container-fluid">    
+          <div class="row">
+            <div class="col-sm"><a href="images/shoe4.jpg"><img class="shoes" id="mainImage" src="images/shoe4.jpg" alt="" width="90%" height="500"></a></div>
+            <div class="col-sm"><i id="name1"></i><p id="description">Crafted for the outdoors, this active shoe features a tan combination upper with the added benefit of GORE-TEX® 
+                waterproof, breathable technology, rugged hiker lacing and a padded collar for ankle support. Underfoot, the partly recycled eco foam footbed and EVA 
+                midsole give lightweight cushioning, while gait reactive Trigenic flex grooves allow freedom of movement and the rubber outsole delivers grip. Performance
+                 and style, in one.</p><b id="price"></b></div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="container-fluid">    
+          <div class="row">
+            <div class="col-sm"><p id="shoe3"><button class="save" id="favo">ADD TO FAVOURITES</button></p></div>
+            <div class="col-sm"><button>BUY</button></div>
+          </div>
+        </div>
+      </div>
+      <footer class="final">
+        <div><img src="logo.jpg" alt="dogLogo" width="100" height="100"></div>
+        <div>
+          <section class="details">
+            <p>Address: 34.343 Sunflower Road, Maria Country</p>
+            <p>&emsp; Telephone: 0345 - 3478374 , 093 - 3433445</p>
+          </section>
+        </div>
+        <div id="social"><a href="https://www.facebook.com/">Facebook</a>
+          <a href="https://www.linkedin.com/">Linkedin</a>
+          <a href="https://www.instagram.com/">Instagram</a>
+        </div>
+      </footer> 
+      <script>
+        $(document).ready(function(){
+         $("#img1").mouseover(function(){
+            $("#mainImage").attr("src","shoe1.jpg");
+          });
+         $("#img1").mouseout(function(){
+          $("#mainImage").attr("src","shoe4.jpg");  
+         });
+         $("#img2").mouseover(function(){
+            $("#mainImage").attr("src","shoe2.jpg");
+          });
+         $("#img2").mouseout(function(){
+          $("#mainImage").attr("src","shoe4.jpg");  
+         });
+         $("#img3").mouseover(function(){
+            $("#mainImage").attr("src","shoe3.jpg");
+          });
+         $("#img3").mouseout(function(){
+          $("#mainImage").attr("src","shoe4.jpg");  
+         });
+         $("#img4").mouseover(function(){
+            $("#mainImage").attr("src","shoe4.jpg");
+          });
+         $("#img4").mouseout(function(){
+          $("#mainImage").attr("src","shoe4.jpg");  
+         });
+         $.getJSON("shoes.json", function(data){
+                    $("#name1").text(data.shoes[2].name);
+                    $("#price").text(data.shoes[2].price+" dollars");
+            }).fail(function(){
+                console.log("An error has occurred.");
+       });
+       });
+    </script> 
+</body>
+</html>

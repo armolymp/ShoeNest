@@ -1,0 +1,129 @@
+{
+	"shoes": [
+		{
+			"id": "shoe1",
+			"name": "Pure Tone",
+			"gender": "Women",
+			"style": "Flat",
+			"sizes": [
+				4,
+				4.5,
+				5,
+				5.5,
+				6,
+				6.5,
+				7
+			],
+			"price": 75.00,
+			"colour": "White",
+			"description": "These chic snake print shoes are crafted from a combination of soft leather and nubuck. For ultimate versatility, they feature a heel piece that folds down - allowing them to be worn as slip-ons or mules. The simple yet sophisticated upper is teamed with a low 2cm heel and rubber outsole to help with grip, while a leather lining and sock work together with our dual density Cushion Plus™ technology to provide comfort in every step.",
+			"picture": "images/flat1.jpeg",
+			"url": "shoe1.html"
+		},
+		{
+			"id": "shoe2",
+			"name": "Orinoco 2 Lace",
+			"gender": "Women",
+			"style": "Boot",
+			"sizes": [
+				5,
+				6,
+				7
+			],
+			"price": 89.00,
+			"colour": "Brown",
+			"description": "Refreshing our bestselling Orinoco profile, a lace-up ankle boot that stays all day wearable. The premium dark olive leather upper stays classic and crafted while the cleated sole with 3cm heel feels durable and adds grip. Perfect to step into the season with casual style.",
+			"picture": "images/boot1.jpeg",
+			"url": "shoe2.html"
+		},
+		{
+			"id": "shoe3",
+			"name": "Adidas shoe",
+			"gender": "Male",
+			"style": "shoe",
+			"sizes": [
+				6,
+				7,
+				8,
+				9
+			],
+			"price": 175.00,
+			"colour": "Black",
+			"description": "These chic snake print shoes are crafted from a combination of soft leather and nubuck. For ultimate versatility, they feature a heel piece that folds down - allowing them to be worn as slip-ons or mules. The simple yet sophisticated upper is teamed with a low 2cm heel and rubber outsole to help with grip, while a leather lining and sock work together with our dual density Cushion Plus™ technology to provide comfort in every step.",
+			"picture": "images/shoe1.jpg",
+			"url": "shoe3.html"
+		},
+		{
+			"id": "shoe4",
+			"name": "White sneaker",
+			"gender": "Universal",
+			"style": "shoe",
+			"sizes": [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			],
+			"price": 50.00,
+			"colour": "White",
+			"description": "These chic snake print shoes are crafted from a combination of soft leather and nubuck. For ultimate versatility, they feature a heel piece that folds down - allowing them to be worn as slip-ons or mules. The simple yet sophisticated upper is teamed with a low 2cm heel and rubber outsole to help with grip, while a leather lining and sock work together with our dual density Cushion Plus™ technology to provide comfort in every step.",
+			"picture": "images/sneaker1.jpeg",
+			"url": "shoe4.html"
+		},
+		{
+			"id": "shoe5",
+			"name": "Nike Running shoe",
+			"gender": "Male",
+			"style": "running",
+			"sizes": [
+				6,
+				7,
+				8,
+				9
+			],
+			"price": 375.00,
+			"colour": "Red",
+			"description": "These chic snake print shoes are crafted from a combination of soft leather and nubuck. For ultimate versatility, they feature a heel piece that folds down - allowing them to be worn as slip-ons or mules. The simple yet sophisticated upper is teamed with a low 2cm heel and rubber outsole to help with grip, while a leather lining and sock work together with our dual density Cushion Plus™ technology to provide comfort in every step.",
+			"picture": "images/spike1.jpeg",
+			"url": "shoe5.html"
+		},
+		{
+			"id": "shoe6",
+			"name": "Sandal",
+			"gender": "Universal",
+			"style": "Sandal",
+			"sizes": [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			],
+			"price": 85.00,
+			"colour": "Black",
+			"description": "These chic snake print shoes are crafted from a combination of soft leather and nubuck. For ultimate versatility, they feature a heel piece that folds down - allowing them to be worn as slip-ons or mules. The simple yet sophisticated upper is teamed with a low 2cm heel and rubber outsole to help with grip, while a leather lining and sock work together with our dual density Cushion Plus™ technology to provide comfort in every step.",
+			"picture": "images/sandal1.jpeg",
+			"url": "shoe6.html"
+		},
+		{
+			"id": "shoe7",
+			"name": "Smart shoe",
+			"gender": "Male",
+			"style": "formal",
+			"sizes": [
+				6,
+				7,
+				8,
+				9
+			],
+			"price": 275.00,
+			"colour": "Brown",
+			"description": "These chic snake print shoes are crafted from a combination of soft leather and nubuck. For ultimate versatility, they feature a heel piece that folds down - allowing them to be worn as slip-ons or mules. The simple yet sophisticated upper is teamed with a low 2cm heel and rubber outsole to help with grip, while a leather lining and sock work together with our dual density Cushion Plus™ technology to provide comfort in every step.",
+			"picture": "images/smart1.jpeg",
+			"url": "shoe7.html"
+		}
+	]
+}

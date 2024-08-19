@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="jquery.js"></script>
+  <script src="shoes.json"></script>
+  <link rel="stylesheet" href="aboutstyle.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="container">
+    <div><img src="logo.jpg" alt="WLogo" width="100" height="100" id="logo"></div>
+    <div id="company">Westminster Shoe Shop </div>
+  </header>
+  <nav class="navigation">
+    <ul>
+      <li><a href="main.html">ABOUT</a></li>
+      <li><a href="allShoes.html">BUY</a></li>
+    </ul>
+  </nav>
+  <section id="about">
+    <h1>Who we are</h1>
+    <p>We are the most recognized and trusted shoe shop in Westminster.We deliver high quality products for an
+      affortable price. A vast range of
+      products to choose from for your need. </p>
+  </section>
+  <section id="buy">
+    <h1 id="sort">Search For Your Needs</h1>
+    <form class="search" name="form" action="index.html" method="post">
+      <label for="gender">Gender</label>
+      <input type="radio" id="male" name="gender" value="Male">Male</input>
+      <input type="radio" id="female" name="gender" value="Women">Female</input>
+      <input type="radio" id="universal" name="gender" value="universal">Universal</input>
+      <label for="style">Style</label>
+      <input type="radio" class="type" name="Style" value="Formal">Formal</input>
+      <input type="radio" class="type" name="Style" value="Flats">Flats</input>
+      <input type="radio" class="type" name="Style" value="Heels">Heels</input>
+      <input type="radio" class="type" name="Style" value="Running">Running</input>
+      <input type="radio" class="type" name="Style" value="Skateshoes">Skateshoes</input>
+      <input type="radio" class="type" name="Style" value="Hightops">Hightops</input>
+      <input type="radio" class="type" name="Style" value="Boots">Boots</input>
+      <label for="price">Price Range</label>
+      <input type="range" min="1" max="100" value="50">
+      <label for="size">Size</label>
+      <input type="number" class="quantity">
+      <label for="color">Color</label>
+      <input type="radio" class="color" name="color" value="Black">Black</input>
+      <input type="radio" class="color" name="color" value="Red">Orange</input>
+      <input type="radio" class="color" name="color" value="Brown">Brown</input>
+      <input type="radio" class="color" name="color" value="White">White</input>
+      <input type="radio" class="color" name="color" value="Blue">Blue</input><br>
+      <button class="ui-button ui-widget ui-corner-all" id="search" class="color" type="button">
+        <span class="ui-icon ui-icon-search"></span> SEARCH
+      </button>
+      
+
+    </form>
+
+    <img src="walk.gif" alt="walk" id="animation" width="100px" height="100px">
+    <div id="place"><img src="#" alt="" id="image"></div>
+  </section>
+  <footer class="final">
+    <div><img src="logo.jpg" alt="dogLogo" width="100" height="100"></div>
+    <div>
+      <section class="details">
+        <p>Address: 34.343 Sunflower Road, Maria Country</p>
+        <p>&emsp; Telephone: 0345 - 3478374 , 093 - 3433445</p>
+      </section>
+    </div>
+    <div id="social"><a href="https://www.facebook.com/">Facebook</a>
+      <a href="https://www.linkedin.com/">Linkedin</a>
+      <a href="https://www.instagram.com/">Instagram</a>
+    </div>
+  </footer>
+
+  <script>
+
+    $(document).ready(function () {
+       
+      $("#search").on("click", function () {
+        $.getJSON("shoes.json", function(data){
+        gender = $("input:checked").val();
+        type = $(".type:checked").val();
+        color = $(".color:checked").val();
+        output = "<ul>";
+        for(var i in data.shoes){
+          if(gender == data.shoes[i].gender || gender== "Universal"){
+            var img = data.shoes[i].picture;
+            var url = data.shoes[i].url;
+            output+='<a href="'+url+'">'+"<li>" + data.shoes[i].name+'<img src="'+img+'" width="250px" height="400px">' +"</li></a>";            
+          }
+          else if(type == data.shoes[i].style){
+            var img = data.shoes[i].picture;
+            var url = data.shoes[i].url;
+            output+='<a href="'+url+'">'+"<li>" + data.shoes[i].name+'<img src="'+img+'" width="250px" height="400px">' +"</li></a>";            
+          }
+          else if(color == data.shoes[i].colour){
+            var img = data.shoes[i].picture;
+            var url = data.shoes[i].url;
+            output+='<a href="'+url+'">'+"<li>" + data.shoes[i].name+'<img src="'+img+'" width="250px" height="400px">' +"</li></a>";            
+          }
+        }
+
+
+        output+="</ul>"
+        document.getElementById("place").innerHTML = output;
+    
+      });  
+      });
+    });
+  </script>
+
+</body>
+
+</html>
